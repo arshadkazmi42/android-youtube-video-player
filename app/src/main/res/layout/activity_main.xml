@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.arshad.letsmath.MainActivity"
+    android:background="@drawable/img"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparentBlackBg"
+        >
+
+        <com.pierfrancescosoffritti.youtubeplayer.YouTubePlayerView
+            android:id="@+id/youtube_player_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:id="@+id/rlBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/youtube_player_view"
+            android:padding="10dp"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rlHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                >
+
+                <ImageView
+                    android:id="@+id/ivImage"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_centerVertical="true"
+                    android:transitionName="@string/photoTransition"
+                    android:scaleType="fitXY"
+                    />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/ivImage"
+                    android:layout_margin="5dp"
+                    android:layout_centerVertical="true"
+                    >
+
+                    <com.arshad.letsmath.MontRegularTextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Jolly LLB 2"
+                        android:textColor="@color/textColorWhite"
+                        android:textSize="30sp"
+                        android:textAllCaps="true"
+                        android:transitionName="@string/nameTransition"
+                        />
+
+                    <com.arshad.letsmath.MontLightTextView
+                        android:id="@+id/tvCast"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="test description"
+                        android:textColor="@color/textColorWhite"
+                        android:textSize="18sp"
+                        />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <com.arshad.letsmath.MontRegularTextView
+                android:id="@+id/tvDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descriptipon"
+                android:textColor="@color/textColorWhite"
+                android:layout_below="@id/rlHeader"
+                android:textSize="17sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

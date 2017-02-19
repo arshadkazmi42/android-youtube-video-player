@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LetsMath</string>
+    <string name="photoTransition">photoTransition</string>
+    <string name="nameTransition">nameTransition</string>
+</resources>
